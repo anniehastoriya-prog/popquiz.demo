@@ -24,10 +24,23 @@ if (Number.isNaN(answer)) {
   }
 }
 
-// Question 2. i want the question to ask " Which country is the largest producer of olive oil?" I want the user to choose between Spain, Russia, or India>
+// Question 2. I want the question to ask " Which country is the largest producer of olive oil?" I want the user to choose between Spain, Russia, or India>
 answerInput = prompt(` Which country is the largest producer of olive oil?
     [1] Russia 
     [2] India
     [3] Spain
 
 `);
+answer = Number(answerInput);
+if (Number.isNaN(answer)) {
+  alert("Enter a Number. Russia, India, or Spain");
+} else if (answer < 1 || answer > 3) {
+  alert("Please Enter 1, 2, or 3.");
+} else {
+  if (answer === 3) {
+    alert("Correct!");
+    score = score + 1;
+  } else {
+    alert("Incorrect!");
+  }
+}
