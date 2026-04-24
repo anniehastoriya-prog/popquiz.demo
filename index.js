@@ -44,3 +44,29 @@ if (Number.isNaN(answer)) {
     alert("Incorrect!");
   }
 }
+
+// Question 3. I want the question to ask "What is the most stolen food item in the world?" I want the user the choose between Cheese, Kimichi, or Apples. I nned the answer to be Cheese.
+
+answerInput = prompt(` What is the most stolen food item in the world?
+    [1] Apples
+    [2] Cheese
+    [3] Kimichi 
+
+`);
+answer = Number(answerInput);
+if (Number.isNaN(answer)) {
+  alert("Enter a Number. Apples, Cheese, or Kimichi");
+} else if (answer < 1 || answer > 3) {
+  alert("Please Enter 1, 2, or 3.");
+} else {
+  if (answer === 3) {
+    alert("Correct!");
+    score = score + 1;
+  } else {
+    alert("Incorrect!");
+  }
+}
+
+alert(`You've Completed the quiz.
+Your final score is ${score} out of 3.
+`);
